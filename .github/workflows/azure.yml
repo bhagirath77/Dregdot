@@ -68,3 +68,11 @@ jobs:
 #         token: ${{ github.token }}
         # Deprecated. Use node-version instead. Will not be supported after October 1, 2019
 #         version: # optional
+    - name: Build and Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: bhagi477/dregdot
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: "virendra74"
+         
